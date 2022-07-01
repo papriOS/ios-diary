@@ -13,8 +13,7 @@
 
 |Diary 생성|Diary 공유 삭제(detail)|Diary 공유 삭제(cell swipe)|
 |---------|---------|----|
-|![](https://i.imgur.com/VEdNmAn.gif)|![](https://i.imgur.com/smWDvAH.gif)|![](https://i.imgur.com/ZQWRW3F.gif)|
-
+|![](https://i.imgur.com/VEdNmAn.gif)|<img src="https://i.imgur.com/XMezeuA.gif" width="270" height="550"/>|![](https://i.imgur.com/ZQWRW3F.gif)|
 ## 👀 PR
 - [STEP1](https://github.com/yagom-academy/ios-diary/pull/1)
 - [STEP2](https://github.com/yagom-academy/ios-diary/pull/11)
@@ -111,6 +110,8 @@ Project의 iOS deployment target이 15.2로 설정되어 있어 위의 방식을
 
 </div>
 </details>
+</br>
+
 
 ## STEP 2️⃣ 고민한점: 코어데이터 DB 구현
 
@@ -135,7 +136,8 @@ PersistentManager에서 CRUD 수행
 이 과정에서 Diary 데이터에 대한 CRUD는
 PersistentManager 를 extension 하여 구분을 해주었습니다.
     
-    ---
+---
+
 **PR 후 개선사항**
     
     기존 PersistentManager의 경우, 사용하는 곳에서 직접 초기화 해서 사용했습니다.
@@ -165,6 +167,7 @@ DiaryDetailViewController에 해당 Notification에 대한 옵져버를 등록�
     이 경우에 textViewDidEndEditing()에서 updateDiary() 매서드 호출되어 따로 처리하지 않았습니다.
     
 ---
+
 **PR후 개선사항**
     
 NotificationName을 "saveDiary"와 같이 하는건 좋지 않다. 이름으로도 의존성이 생길수가 있기때문
@@ -250,6 +253,7 @@ MVC에서 DataSource역시 View의 관점으로 바라봐야한다.
 </div>
 </details>
 </br>
+
 
 
 ## STEP 3️⃣ 고민한점: 날씨 API를 통한 날씨 기록 및 표시
